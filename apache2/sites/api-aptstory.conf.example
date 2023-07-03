@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName local-api.aptstory.com
+    DocumentRoot /var/www/aptstory-api/public
+
+    <Directory /var/www/aptstory-api/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+  ErrorLog /var/log/apache2/error.log
+  CustomLog /var/log/apache2/access.log combined
+</VirtualHost>
